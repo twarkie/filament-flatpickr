@@ -369,9 +369,11 @@ class Flatpickr extends Field implements Contracts\CanBeLengthConstrained, Contr
         return $this->defaultHour;
     }
 
-    public function defaultHour(int $defaultHour): void
+    public function defaultHour(int $defaultHour): static
     {
         $this->defaultHour = $defaultHour;
+
+	return $this;
     }
 
     public function getDefaultMinute(): int
